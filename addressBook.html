@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="addressBook.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="addressBook.js"></script>
+    </head>
+    <body onload="load()">
+        <header class="header">
+            <h1 class="mainHeading">
+                Address Book
+            </h1>
+        </header>
+        <nav class="navigationBar">
+            <div class="nav">
+                <div class="navItem  activePage" id="home"><a class="navigate">HOME</a></div>
+                <div class="navItem" id="add"><a class="navigate">+ADD</a></div>
+            </div>
+            <div><img src="blog-icon.png" class="icon"></div>
+        </nav>
+        <div class="contacts">
+            <div class="contactSummary" id="summary">
+                <p class="contact">CONTACTS</p>
+            </div>
+            <div class="contactInfo">
+                <div class="nameBar">
+                    <h1 id="detailedName"></h1>
+                    <div class="center">
+                    <div class="modifyBar">
+                        <div class="modify" id="edit">
+                            <img class="editSymbol" src="edit1.jpg">
+                            <a class="btn">EDIT</a>
+                        </div>
+                        <div class="modify" id="delete">
+                            <img class="deleteSymbol" src="delete2.png">
+                            <a class="btn">DELETE</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="sameline content"><p>Email:</p>&nbsp;<pre id="detailedEmail"></pre></div>
+                    <div class="sameline content"><p>Mobile:</p>&nbsp;<pre id="detailedMobile"></pre></div>
+                    <div class="sameline"><p>Landline:</p>&nbsp;<pre id="detailedLandline"></pre></div>
+                    <div class="sameline content"><p>Website:</p>&nbsp;<pre id="detailedWebsite"></pre></div>
+                    <div class="sameline content"><p>Address:</p>&nbsp;<pre id="detailedAddress"></pre></div>
+                </div>
+            </div>
+            <div class="addForm" id="addDetails">
+                <table>
+                    <form class="deatilsForm" id="createForm">
+                        <tr>
+                            <td>
+                                <label for="newName">Name</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="text" id="newName"><p class="error" id="nameError">&nbsp;</p></td><td class="rightSpace"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="newEmail">Email</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="text" id="newEmail"><p class="error" id="emailError">&nbsp;</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="newMobile">Mobile</label>
+                            </td>
+                            <td>
+                                <label for="newLandline">Landline</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="newMobile"><p class="error" id="mobileError">&nbsp;</p></td>
+                            <td><input type="text" id="newLandline"><p class="error" id="landlineError">&nbsp;</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="newWebsite">Website</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="text" id="newWebsite"><p class="error" id="websiteError">&nbsp;</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="newAddress">Address</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><textarea type="text" class="address" id="newAddress"></textarea><p class="error" id="addressError">&nbsp;</p></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="rightSpace">
+                                <input type="button" id="createButton" class="addbtn" value="Add">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
